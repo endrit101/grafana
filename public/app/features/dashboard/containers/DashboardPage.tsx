@@ -29,7 +29,6 @@ import {
 } from 'app/types';
 
 import { DashboardModel, PanelModel } from 'app/features/dashboard/state';
-import { InspectTab, PanelInspector } from '../components/Inspector/PanelInspector';
 import { getConfig } from '../../../core/config';
 import { SubMenu } from '../components/SubMenu/SubMenu';
 
@@ -54,7 +53,6 @@ export interface Props {
   cleanUpDashboard: typeof cleanUpDashboard;
   notifyApp: typeof notifyApp;
   updateLocation: typeof updateLocation;
-  inspectTab?: InspectTab;
   isPanelEditorOpen?: boolean;
 }
 
@@ -257,7 +255,7 @@ export class DashboardPage extends PureComponent<Props, State> {
       $injector,
       isInitSlow,
       initError,
-      inspectTab,
+      // inspectTab,
       isPanelEditorOpen,
       updateLocation,
     } = this.props;
@@ -279,7 +277,6 @@ export class DashboardPage extends PureComponent<Props, State> {
 
     // Only trigger render when the scroll has moved by 25
     const approximateScrollTop = Math.round(scrollTop / 25) * 25;
-    const inspectPanel = this.getInspectPanel();
 
     return (
       <div>
@@ -308,7 +305,6 @@ export class DashboardPage extends PureComponent<Props, State> {
           </CustomScrollbar>
         </div>
 
-        {inspectPanel && <PanelInspector dashboard={dashboard} panel={inspectPanel} defaultTab={inspectTab} />}
         {editPanel && <PanelEditor dashboard={dashboard} sourcePanel={editPanel} />}
         {editview && <DashboardSettings dashboard={dashboard} updateLocation={updateLocation} />}
       </div>
@@ -330,7 +326,6 @@ export const mapStateToProps = (state: StoreState) => ({
   isInitSlow: state.dashboard.isInitSlow,
   initError: state.dashboard.initError,
   dashboard: state.dashboard.getModel() as DashboardModel,
-  inspectTab: state.location.query.inspectTab,
   isPanelEditorOpen: state.panelEditor.isOpen,
 });
 

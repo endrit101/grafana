@@ -1,6 +1,6 @@
 import { updateLocation } from 'app/core/actions';
 import { store } from 'app/store/store';
-import { AngularComponent, getDataSourceSrv, getLocationSrv } from '@grafana/runtime';
+import { AngularComponent, getDataSourceSrv } from '@grafana/runtime';
 import { PanelMenuItem } from '@grafana/data';
 import { copyPanel, duplicatePanel, removePanel, sharePanel } from 'app/features/dashboard/utils/panel';
 import { PanelModel } from 'app/features/dashboard/state/PanelModel';
@@ -43,18 +43,6 @@ export function getPanelMenu(
   const onSharePanel = (event: React.MouseEvent<any>) => {
     event.preventDefault();
     sharePanel(dashboard, panel);
-  };
-
-  const onInspectPanel = (tab?: string) => {
-    event.preventDefault();
-
-    getLocationSrv().update({
-      partial: true,
-      query: {
-        inspect: panel.id,
-        inspectTab: tab,
-      },
-    });
   };
 
   const onMore = (event: React.MouseEvent<any>) => {
@@ -117,37 +105,6 @@ export function getPanelMenu(
       onClick: onNavigateToExplore,
     });
   }
-
-  const inspectMenu: PanelMenuItem[] = [];
-
-  // Only show these inspect actions for data plugins
-  if (panel.plugin && !panel.plugin.meta.skipDataQuery) {
-    inspectMenu.push({
-      text: 'Data',
-      onClick: (e: React.MouseEvent<any>) => onInspectPanel('data'),
-    });
-
-    if (dashboard.meta.canEdit) {
-      inspectMenu.push({
-        text: 'Query',
-        onClick: (e: React.MouseEvent<any>) => onInspectPanel('query'),
-      });
-    }
-  }
-
-  inspectMenu.push({
-    text: 'Panel JSON',
-    onClick: (e: React.MouseEvent<any>) => onInspectPanel('json'),
-  });
-
-  menu.push({
-    type: 'submenu',
-    text: 'Inspect',
-    iconClassName: 'info-circle',
-    onClick: (e: React.MouseEvent<any>) => onInspectPanel(),
-    shortcut: 'i',
-    subMenu: inspectMenu,
-  });
 
   const subMenu: PanelMenuItem[] = [];
 
