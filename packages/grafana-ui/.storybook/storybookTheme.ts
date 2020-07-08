@@ -39,7 +39,8 @@ const createTheme = (theme: GrafanaTheme) => {
 
     brandTitle: 'Grafana UI',
     brandUrl: './',
-    brandImage: './grafana_icon.svg',
+    brandImage: '',
+    // brandImage: './grafana_icon.svg',
   });
 };
 

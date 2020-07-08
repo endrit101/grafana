@@ -277,14 +277,15 @@ func (sn *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 		}
 	}
 	attachment := map[string]interface{}{
-		"color":       evalContext.GetStateModel().Color,
-		"title":       evalContext.GetNotificationTitle(),
-		"title_link":  ruleURL,
-		"text":        msg,
-		"fallback":    evalContext.GetNotificationTitle(),
-		"fields":      fields,
-		"footer":      "Grafana v" + setting.BuildVersion,
-		"footer_icon": "https://grafana.com/assets/img/fav32.png",
+		"color":      evalContext.GetStateModel().Color,
+		"title":      evalContext.GetNotificationTitle(),
+		"title_link": ruleURL,
+		"text":       msg,
+		"fallback":   evalContext.GetNotificationTitle(),
+		"fields":     fields,
+		"footer":     "Grafana v" + setting.BuildVersion,
+		// "footer_icon": "https://grafana.com/assets/img/fav32.png",
+		"footer_icon": "",
 		"ts":          time.Now().Unix(),
 	}
 	if sn.NeedsImage() && imageURL != "" {

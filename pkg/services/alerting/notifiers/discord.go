@@ -96,8 +96,9 @@ func (dn *DiscordNotifier) Notify(evalContext *alerting.EvalContext) error {
 	}
 
 	footer := map[string]interface{}{
-		"text":     "Grafana v" + setting.BuildVersion,
-		"icon_url": "https://grafana.com/assets/img/fav32.png",
+		"text": "Grafana v" + setting.BuildVersion,
+		// "icon_url": "https://grafana.com/assets/img/fav32.png",
+		"icon_url": "",
 	}
 
 	color, _ := strconv.ParseInt(strings.TrimLeft(evalContext.GetStateModel().Color, "#"), 16, 0)

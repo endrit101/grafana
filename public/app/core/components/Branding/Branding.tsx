@@ -7,9 +7,10 @@ export interface BrandComponentProps {
   children?: JSX.Element | JSX.Element[];
 }
 
-const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
-  return <img className={className} src="public/img/grafana_icon.svg" alt="Grafana" />;
-};
+// const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
+//   return <img className={className}/>;
+//   // return <img className={className} src="public/img/grafana_icon.svg" alt="Grafana" />;
+// };
 
 const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
   const theme = useTheme();
@@ -21,9 +22,10 @@ const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
   return <div className={cx(background, className)}>{children}</div>;
 };
 
-const MenuLogo: FC<BrandComponentProps> = ({ className }) => {
-  return <img className={className} src="public/img/grafana_icon.svg" alt="Grafana" />;
-};
+// const MenuLogo: FC<BrandComponentProps> = ({ className }) => {
+//   return <img className={className}/>;
+//   // return <img className={className} src="public/img/grafana_icon.svg" alt="Grafana" />;
+// };
 
 const LoginBoxBackground = () => {
   const theme = useTheme();
@@ -34,9 +36,9 @@ const LoginBoxBackground = () => {
 };
 
 export class Branding {
-  static LoginLogo = LoginLogo;
+  // static LoginLogo = LoginLogo;
   static LoginBackground = LoginBackground;
-  static MenuLogo = MenuLogo;
+  // static MenuLogo = MenuLogo;
   static LoginBoxBackground = LoginBoxBackground;
   static AppTitle = 'Grafana';
   static LoginTitle = 'Welcome to Grafana';
