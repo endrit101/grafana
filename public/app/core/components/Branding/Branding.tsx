@@ -7,25 +7,25 @@ export interface BrandComponentProps {
   children?: JSX.Element | JSX.Element[];
 }
 
-// const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
-//   return <img className={className}/>;
-//   // return <img className={className} src="public/img/grafana_icon.svg" alt="Grafana" />;
-// };
+const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
+  // return <img className={className}/>;
+  return <img className={className} src="public/img/finvezt-logo.png" alt="Finevzt" />;
+};
 
+// background: url(public/img/login_background_${theme.isDark ? 'dark' : 'light'}.svg);
 const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
-  const theme = useTheme();
   const background = css`
-    background: url(public/img/login_background_${theme.isDark ? 'dark' : 'light'}.svg);
+    background: url(public/img/finevzt.png);
     background-size: cover;
   `;
 
   return <div className={cx(background, className)}>{children}</div>;
 };
 
-// const MenuLogo: FC<BrandComponentProps> = ({ className }) => {
-//   return <img className={className}/>;
-//   // return <img className={className} src="public/img/grafana_icon.svg" alt="Grafana" />;
-// };
+const MenuLogo: FC<BrandComponentProps> = ({ className }) => {
+  // return <img className={className}/>;
+  return <img className={className} src="public/img/finvezt-logo.png" alt="Finevzt" />;
+};
 
 const LoginBoxBackground = () => {
   const theme = useTheme();
@@ -36,20 +36,20 @@ const LoginBoxBackground = () => {
 };
 
 export class Branding {
-  // static LoginLogo = LoginLogo;
+  static LoginLogo = LoginLogo;
   static LoginBackground = LoginBackground;
-  // static MenuLogo = MenuLogo;
+  static MenuLogo = MenuLogo;
   static LoginBoxBackground = LoginBoxBackground;
-  static AppTitle = 'Grafana';
-  static LoginTitle = 'Welcome to Grafana';
-  static GetLoginSubTitle = () => {
-    const slogans = [
-      "Don't get in the way of the data",
-      'Your single pane of glass',
-      'Built better together',
-      'Democratising data',
-    ];
-    const count = slogans.length;
-    return slogans[Math.floor(Math.random() * count)];
-  };
+  static AppTitle = 'Finevzt';
+  // static LoginTitle = 'Welcome to Finevzt';
+  // static GetLoginSubTitle = () => {
+  //   const slogans = [
+  //     "Don't get in the way of the data",
+  //     'Your single pane of glass',
+  //     'Built better together',
+  //     'Democratising data',
+  //   ];
+  //   const count = slogans.length;
+  //   return slogans[Math.floor(Math.random() * count)];
+  // };
 }

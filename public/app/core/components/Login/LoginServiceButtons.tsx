@@ -33,8 +33,8 @@ const loginServices: () => LoginServices = () => {
     grafanacom: {
       enabled: oauthEnabled && config.oauth.grafana_com,
       name: 'Grafana.com',
-      hrefName: 'grafana_com',
-      icon: 'grafana_com',
+      hrefName: 'finevzt',
+      icon: 'finevzt',
     },
     okta: {
       enabled: oauthEnabled && config.oauth.okta,

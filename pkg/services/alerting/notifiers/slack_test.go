@@ -91,7 +91,7 @@ func TestSlackNotifier(t *testing.T) {
 				So(slackNotifier.Username, ShouldEqual, "Grafana Alerts")
 				So(slackNotifier.IconEmoji, ShouldEqual, ":smile:")
 				So(slackNotifier.IconURL, ShouldEqual, "")
-				// So(slackNotifier.IconURL, ShouldEqual, "https://grafana.com/img/fav32.png")
+				So(slackNotifier.IconURL, ShouldEqual, "https://grafana.com/img/fav.png")
 				So(slackNotifier.MentionUsers, ShouldResemble, []string{"user1", "user2"})
 				So(slackNotifier.MentionGroups, ShouldResemble, []string{"group1", "group2"})
 				So(slackNotifier.MentionChannel, ShouldEqual, "here")

@@ -39,8 +39,7 @@ const createTheme = (theme: GrafanaTheme) => {
 
     brandTitle: 'Grafana UI',
     brandUrl: './',
-    brandImage: '',
-    // brandImage: './grafana_icon.svg',
+    brandImage: './finevzt-logo.png',
   });
 };
 
