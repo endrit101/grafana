@@ -15,7 +15,7 @@ export const WelcomeBanner: FC = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Welcome to Finevzt</h1>
+      <h1 className={styles.title}>Welcome to Finvezt</h1>
       <div className={styles.help}>
         <h3 className={styles.helpText}>Need help?</h3>
         <div className={styles.helpLinks}>
@@ -37,13 +37,14 @@ export const WelcomeBanner: FC = () => {
 };
 
 const getStyles = stylesFactory((theme: GrafanaTheme) => {
-  // const backgroundImage = theme.isDark ? 'public/img/finevzt.png' : lightBackground;
-  const backgroundImage = 'public/img/finevzt-logo.png';
+  // const backgroundImage = theme.isDark ? 'public/img/finvezt.png' : lightBackground;
+  // const backgroundImage = 'public/img/finvezt-logo.png';
+
+  // Removed background: url(${backgroundImage}) no-repeat; from line 48
 
   return {
     container: css`
       display: flex;
-      background: url(${backgroundImage}) no-repeat;
       background-size: cover;
       height: 100%;
       align-items: center;

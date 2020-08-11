@@ -85,10 +85,11 @@ func (hs *HTTPServer) setIndexViewData(c *models.ReqContext) (*dtos.IndexViewDat
 		NewGrafanaVersionExists: plugins.GrafanaHasUpdate,
 		AppName:                 setting.ApplicationName,
 		AppNameBodyClass:        getAppNameBodyClass(hs.License.HasValidLicense()),
-		FavIcon:                 "../public/img/favicon.ico",
+		FavIcon:                 "public/img/favicon.ico",
 		// AppleTouchIcon: "public/img/apple-touch-icon.png",
 		AppleTouchIcon: "",
-		AppTitle:       "Grafana",
+		// AppTitle:       "Grafana",
+		AppTitle: "Finvezt",
 	}
 
 	if setting.DisableGravatar {

@@ -37,9 +37,10 @@ const createTheme = (theme: GrafanaTheme) => {
     inputTextColor: theme.colors.formInputText,
     inputBorderRadius: 4,
 
-    brandTitle: 'Grafana UI',
+    // Changed name from Grafana UI to Finvezt UI
+    brandTitle: 'Finvezt UI',
     brandUrl: './',
-    brandImage: './finevzt-logo.png',
+    brandImage: './static/finvezt-logo.png',
   });
 };
 

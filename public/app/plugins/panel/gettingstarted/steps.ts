@@ -17,7 +17,7 @@ const step2Key = `${keyPrefix}${step2TutorialTitle
 
 export const getSteps = (): SetupStep[] => [
   {
-    heading: 'Welcome to Finevzt',
+    heading: 'Welcome to Finvezt',
     subheading: 'The steps below will guide you to quickly finish setting up your Grafana installation.',
     title: 'Basic',
     info: 'The steps below will guide you to quickly finish setting up your Grafana installation.',

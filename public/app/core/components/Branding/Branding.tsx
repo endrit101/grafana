@@ -7,15 +7,16 @@ export interface BrandComponentProps {
   children?: JSX.Element | JSX.Element[];
 }
 
-const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
-  // return <img className={className}/>;
-  return <img className={className} src="public/img/finvezt-logo.png" alt="Finevzt" />;
-};
+// Removed the small logo
+// const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
+//   // return <img className={className}/>;
+//   return <img className={className} src="public/img/finvezt-logo.png" alt="Finvezt" />;
+// };
 
 // background: url(public/img/login_background_${theme.isDark ? 'dark' : 'light'}.svg);
 const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
   const background = css`
-    background: url(public/img/finevzt.png);
+    background: url(public/img/finvezt.png);
     background-size: cover;
   `;
 
@@ -24,7 +25,7 @@ const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
 
 const MenuLogo: FC<BrandComponentProps> = ({ className }) => {
   // return <img className={className}/>;
-  return <img className={className} src="public/img/finvezt-logo.png" alt="Finevzt" />;
+  return <img className={className} src="public/img/finvezt-logo.png" alt="Finvezt" />;
 };
 
 const LoginBoxBackground = () => {
@@ -36,12 +37,12 @@ const LoginBoxBackground = () => {
 };
 
 export class Branding {
-  static LoginLogo = LoginLogo;
+  // static LoginLogo = LoginLogo;
   static LoginBackground = LoginBackground;
   static MenuLogo = MenuLogo;
   static LoginBoxBackground = LoginBoxBackground;
-  static AppTitle = 'Finevzt';
-  // static LoginTitle = 'Welcome to Finevzt';
+  static AppTitle = 'Finvezt';
+  static LoginTitle = 'Welcome to Finvezt';
   // static GetLoginSubTitle = () => {
   //   const slogans = [
   //     "Don't get in the way of the data",

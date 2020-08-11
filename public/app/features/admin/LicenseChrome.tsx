@@ -55,8 +55,8 @@ export const LicenseChrome: React.FC<Props> = ({ header, editionNotice, subheade
           }}
         >
           <img
-            src="public/img/finevzt-logo.png"
-            alt="Finevzt"
+            src="public/img/finvezt-logo.png"
+            alt="Finvezt"
             width="80px"
             style={{ position: 'absolute', left: '23px', top: '20px' }}
           />

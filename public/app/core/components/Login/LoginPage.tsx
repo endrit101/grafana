@@ -18,7 +18,7 @@ export const LoginPage: FC = () => {
     <Branding.LoginBackground className={loginStyles.container}>
       <div className={cx(loginStyles.loginContent, Branding.LoginBoxBackground())}>
         <div className={loginStyles.loginLogoWrapper}>
-          <Branding.LoginLogo className={loginStyles.loginLogo} />
+          {/* <Branding.LoginLogo className={loginStyles.loginLogo} /> Removed small logo*/}
         </div>
         <LoginCtrl>
           {({
