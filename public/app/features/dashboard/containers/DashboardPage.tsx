@@ -26,9 +26,11 @@ import {
   StoreState,
 } from 'app/types';
 
+// Changes made: Removed Inspector tabs
+
 import { DashboardModel, PanelModel } from 'app/features/dashboard/state';
-import { InspectTab } from '../components/Inspector/types';
-import { PanelInspector } from '../components/Inspector/PanelInspector';
+// import { InspectTab } from '../components/Inspector/types';
+// import { PanelInspector } from '../components/Inspector/PanelInspector';
 import { SubMenu } from '../components/SubMenu/SubMenu';
 import { cleanUpDashboardAndVariables } from '../state/actions';
 import { cancelVariables } from '../../variables/state/actions';
@@ -55,7 +57,7 @@ export interface Props {
   cleanUpDashboardAndVariables: typeof cleanUpDashboardAndVariables;
   notifyApp: typeof notifyApp;
   updateLocation: typeof updateLocation;
-  inspectTab?: InspectTab;
+  // inspectTab?: InspectTab;
   isPanelEditorOpen?: boolean;
   cancelVariables: typeof cancelVariables;
 }
@@ -264,21 +266,21 @@ export class DashboardPage extends PureComponent<Props, State> {
     );
   }
 
-  getInspectPanel() {
-    const { dashboard, inspectPanelId } = this.props;
-    if (!dashboard || !inspectPanelId) {
-      return null;
-    }
+  // getInspectPanel() {
+  //   const { dashboard, inspectPanelId } = this.props;
+  //   if (!dashboard || !inspectPanelId) {
+  //     return null;
+  //   }
 
-    const inspectPanel = dashboard.getPanelById(parseInt(inspectPanelId, 10));
+  //   const inspectPanel = dashboard.getPanelById(parseInt(inspectPanelId, 10));
 
-    // cannot inspect panels plugin is not already loaded
-    if (!inspectPanel) {
-      return null;
-    }
+  //   // cannot inspect panels plugin is not already loaded
+  //   if (!inspectPanel) {
+  //     return null;
+  //   }
 
-    return inspectPanel;
-  }
+  //   return inspectPanel;
+  // }
 
   render() {
     const {
@@ -287,7 +289,7 @@ export class DashboardPage extends PureComponent<Props, State> {
       $injector,
       isInitSlow,
       initError,
-      inspectTab,
+      // inspectTab,
       isPanelEditorOpen,
       updateLocation,
     } = this.props;
@@ -303,7 +305,7 @@ export class DashboardPage extends PureComponent<Props, State> {
 
     // Only trigger render when the scroll has moved by 25
     const approximateScrollTop = Math.round(scrollTop / 25) * 25;
-    const inspectPanel = this.getInspectPanel();
+    // const inspectPanel = this.getInspectPanel();
 
     return (
       <div className="dashboard-container">
@@ -335,7 +337,7 @@ export class DashboardPage extends PureComponent<Props, State> {
           </CustomScrollbar>
         </div>
 
-        {inspectPanel && <PanelInspector dashboard={dashboard} panel={inspectPanel} defaultTab={inspectTab} />}
+        {/* {inspectPanel && <PanelInspector dashboard={dashboard} panel={inspectPanel} defaultTab={inspectTab} />} */}
         {editPanel && <PanelEditor dashboard={dashboard} sourcePanel={editPanel} />}
         {editview && <DashboardSettings dashboard={dashboard} updateLocation={updateLocation} />}
       </div>

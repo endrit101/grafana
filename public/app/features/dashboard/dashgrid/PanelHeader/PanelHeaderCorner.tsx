@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 
 import { renderMarkdown, LinkModelSupplier, ScopedVars } from '@grafana/data';
 import { Tooltip, PopoverContent } from '@grafana/ui';
-import { getLocationSrv, getTemplateSrv } from '@grafana/runtime';
+// Removing Inspect tab (And with other commented code)
+// import { getLocationSrv } from '@grafana/runtime';
 
 import { PanelModel } from 'app/features/dashboard/state/PanelModel';
 import { getTimeSrv, TimeSrv } from 'app/features/dashboard/services/TimeSrv';
-import { InspectTab } from '../../components/Inspector/types';
+// import { InspectTab } from '../../components/Inspector/types';
 
 enum InfoMode {
   Error = 'Error',
@@ -72,9 +73,9 @@ export class PanelHeaderCorner extends Component<Props> {
   /**
    * Open the Panel Inspector when we click on an error
    */
-  onClickError = () => {
-    getLocationSrv().update({ partial: true, query: { inspect: this.props.panel.id, inspectTab: InspectTab.Error } });
-  };
+  // onClickError = () => {
+  //   getLocationSrv().update({ partial: true, query: { inspect: this.props.panel.id, inspectTab: InspectTab.Error } });
+  // };
 
   renderCornerType(infoMode: InfoMode, content: PopoverContent, onClick?: () => void) {
     const theme = infoMode === InfoMode.Error ? 'error' : 'info';
@@ -89,16 +90,16 @@ export class PanelHeaderCorner extends Component<Props> {
   }
 
   render() {
-    const { error } = this.props;
+    // const { error } = this.props;
     const infoMode: InfoMode | undefined = this.getInfoMode();
 
     if (!infoMode) {
       return null;
     }
 
-    if (infoMode === InfoMode.Error && error) {
-      return this.renderCornerType(infoMode, error, this.onClickError);
-    }
+    // if (infoMode === InfoMode.Error && error) {
+    //   return this.renderCornerType(infoMode, error, this.onClickError);
+    // }
 
     if (infoMode === InfoMode.Info || infoMode === InfoMode.Links) {
       return this.renderCornerType(infoMode, this.getInfoContent);
