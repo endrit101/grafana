@@ -19,7 +19,8 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#000" />
 
-    <title>[[.AppTitle]]</title>
+    <!-- <title>[[.AppTitle]]</title> -->
+    <title>Finvezt</title>
 
     <base href="[[.AppSubUrl]]/" />
 
@@ -46,7 +47,7 @@
   </head>
 
   <body class="theme-[[ .Theme ]] [[.AppNameBodyClass]]">
-    <style>
+    <!-- <style>
       .preloader {
         height: 100%;
         flex-direction: column;
@@ -182,18 +183,44 @@
       .ng-cloak {
         display: none !important;
       }
+    </style> -->
+    <style>
+      .preloader {
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .preloader__text {
+        margin-top: 16px;
+        font-weight: 500;
+        font-size: 14px;
+        font-family: Sans-serif;
+        opacity: 0;
+        animation-name: preloader-fade-in;
+        animation-duration: 0.9s;
+        animation-delay: 1.8s;
+        animation-fill-mode: forwards;
+      }
+
+      /* Fail info */
+      .preloader__text--fail {
+        display: none;
+      }
     </style>
 
     <div class="preloader">
-      <div class="preloader__enter">
+      <!-- <div class="preloader__enter">
         <div class="preloader__bounce">
           <div class="preloader__logo"></div>
         </div>
-      </div>
-      <div class="preloader__text">Loading Grafana</div>
+      </div> -->
+      <div class="preloader__text">Loading Finvezt</div>
       <div class="preloader__text preloader__text--fail">
         <p>
-          <strong>If you're seeing this Grafana has failed to load its application files</strong>
+          <strong>If you're seeing this Finvezt has failed to load its application files</strong>
           <br />
           <br />
         </p>

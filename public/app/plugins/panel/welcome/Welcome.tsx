@@ -2,13 +2,15 @@ import React, { FC } from 'react';
 import { css } from 'emotion';
 import { GrafanaTheme } from '@grafana/data';
 import { stylesFactory, useTheme } from '@grafana/ui';
-import lightBackground from './img/background_light.svg';
+// We don't have light and dark background
+// import lightBackground from './img/background_light.svg';
 
 const helpOptions = [
   { value: 0, label: 'Documentation', href: 'https://grafana.com/docs/grafana/latest' },
   { value: 1, label: 'Tutorials', href: 'https://grafana.com/tutorials' },
-  { value: 2, label: 'Community', href: 'https://community.grafana.com' },
-  { value: 3, label: 'Public Slack', href: 'http://slack.grafana.com' },
+  // Leave only tutorials and documentation
+  // { value: 2, label: 'Community', href: 'https://community.grafana.com' },
+  // { value: 3, label: 'Public Slack', href: 'http://slack.grafana.com' },
 ];
 
 export const WelcomeBanner: FC = () => {
@@ -16,7 +18,7 @@ export const WelcomeBanner: FC = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Welcome to Grafana</h1>
+      <h1 className={styles.title}>Welcome to Finvezt</h1>
       <div className={styles.help}>
         <h3 className={styles.helpText}>Need help?</h3>
         <div className={styles.helpLinks}>
@@ -38,7 +40,8 @@ export const WelcomeBanner: FC = () => {
 };
 
 const getStyles = stylesFactory((theme: GrafanaTheme) => {
-  const backgroundImage = theme.isDark ? 'public/img/login_background_dark.svg' : lightBackground;
+  // const backgroundImage = theme.isDark ? 'public/img/login_background_dark.svg' : lightBackground;
+  const backgroundImage = 'public/img/finvezt.png';
 
   return {
     container: css`

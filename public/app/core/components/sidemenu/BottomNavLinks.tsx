@@ -58,7 +58,8 @@ export default class BottomNavLinks extends PureComponent<Props, State> {
         <ul className="dropdown-menu dropdown-menu--sidemenu" role="menu">
           {link.subTitle && (
             <li className="sidemenu-subtitle">
-              <span className="sidemenu-item-text">{link.subTitle}</span>
+              <span className="sidemenu-item-text">© 2020 Finvezt</span>
+              {/* Don't show grafana title <span className="sidemenu-item-text">{link.subTitle}</span> */}
             </li>
           )}
           {link.showOrgSwitcher && (
