@@ -1,0 +1,20 @@
+
+v1.0 13/08/2020
+    Removed Panel Inspect - public/app/features/dashboard/containers/DashboardPage.tsx,
+                            public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderCorner.tsx,
+                            public/app/features/dashboard/utils/getPanelMenu.ts,
+    Removed bottom Sidemenu Options - public/app/core/components/Footer/Footer.tsx
+    Branded Grafana with Finvezt logos and names - public/app/core/components/Branding/Branding.tsx,
+                                                public/app/core/components/Footer/Footer.tsx,
+                                                public/app/core/components/Login/LoginLayout.tsx,
+                                                public/app/core/components/sidemenu/BottomNavLinks.tsx,
+                                                public/app/plugins/panel/welcome/Welcome.tsx,
+                                                public/views/error-template.html,
+                                                public/views/index-template.html
+    Files added - public/img/finvezt-logo.png,
+                public/img/finvezt.png,
+                public/img/finvezt_icon.png
+
+    Moved public/img/grafana_icon.svg to public/img/old_grafana/grafana_icon.svg
+    Replaced public/img/fav32.png of grafana with Finvezt (same name)
+    Removed "Latest from the blog" - public/dashboards/home.json (Couldn't commment it out cause json doesn't allow it)
