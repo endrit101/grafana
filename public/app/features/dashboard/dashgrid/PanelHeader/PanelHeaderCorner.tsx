@@ -8,6 +8,11 @@ import { Tooltip, PopoverContent } from '@grafana/ui';
 import { PanelModel } from 'app/features/dashboard/state/PanelModel';
 import { getTimeSrv, TimeSrv } from 'app/features/dashboard/services/TimeSrv';
 // import { InspectTab } from '../../components/Inspector/types';
+<<<<<<< HEAD
+=======
+// import { InspectTab } from '../../components/Inspector/types';
+import { selectors } from '@grafana/e2e-selectors';
+>>>>>>> af6d43840d... fixed merge conflicts
 
 enum InfoMode {
   Error = 'Error',
