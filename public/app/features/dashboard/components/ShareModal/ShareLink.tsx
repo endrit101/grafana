@@ -169,9 +169,9 @@ export class ShareLink extends PureComponent<Props, State> {
                     rel="noopener noreferrer"
                     className="external-link"
                   >
-                    Grafana Image Renderer plugin
+                    Finvezt Image Renderer plugin
                   </a>
-                  . Please contact your Grafana administrator to install the plugin.
+                  . Please contact your Finvezt administrator to install the plugin.
                 </p>
               </InfoBox>
             )}

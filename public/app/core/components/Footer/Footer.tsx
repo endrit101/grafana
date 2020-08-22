@@ -34,6 +34,7 @@ export let getFooterLinks = (): FooterLink[] => {
 };
 
 export let getVersionLinks = (): FooterLink[] => {
+  // We don't need the buildinfo and licenseinfo. Therefore we have commented it out
   // const { buildInfo, licenseInfo } = config;
   const links: FooterLink[] = [];
   // const stateInfo = licenseInfo.stateInfo ? ` (${licenseInfo.stateInfo})` : '';

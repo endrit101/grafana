@@ -2,7 +2,8 @@
 v1.0 13/08/2020
     Removed Panel Inspect - public/app/features/dashboard/containers/DashboardPage.tsx,
                             public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderCorner.tsx,
-                            public/app/features/dashboard/utils/getPanelMenu.ts,
+                            public/app/features/dashboard/utils/getPanelMenu.ts
+
     Removed bottom Sidemenu Options - public/app/core/components/Footer/Footer.tsx
     Branded Grafana with Finvezt logos and names - public/app/core/components/Branding/Branding.tsx,
                                                 public/app/core/components/Footer/Footer.tsx,
@@ -18,3 +19,28 @@ v1.0 13/08/2020
     Moved public/img/grafana_icon.svg to public/img/old_grafana/grafana_icon.svg
     Replaced public/img/fav32.png of grafana with Finvezt (same name)
     Removed "Latest from the blog" - public/dashboards/home.json (Couldn't commment it out cause json doesn't allow it)
+
+v2 22/08/2020
+    Made changes in the email templates and replace Grafana titles with Finvezt
+        emails/templates/invited_to_org.html
+        emails/templates/new_user_invite.html
+        emails/templates/reset_password.html
+        emails/templates/signup_started.html
+        emails/templates/welcome_on_signup.html
+        public/app/core/components/Footer/Footer.tsx
+        public/app/core/components/ForgottenPassword/ForgottenPassword.tsx
+        public/app/features/admin/UserListAdminPage.tsx
+        public/app/features/admin/UserPermissions.tsx
+        public/app/features/admin/ldap/LdapUserPermissions.tsx
+        public/app/features/alerting/components/NewNotificationChannelForm.tsx
+        public/app/features/alerting/partials/notification_edit.html
+        public/app/features/dashboard/components/ShareModal/ShareLink.tsx
+        public/app/features/plugins/partials/update_instructions.html
+        public/emails/alert_notification.html
+        public/emails/alert_notification_example.html
+        public/emails/invited_to_org.html
+        public/emails/new_user_invite.html
+        public/views/error-template.html
+    
+    With Krishna added nginx configuration to the servers, added iptables rule in order to access the grafana web server in our own
+    servers, with a url, without a port number.
