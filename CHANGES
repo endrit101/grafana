@@ -44,3 +44,15 @@ v2 22/08/2020
     
     With Krishna added nginx configuration to the servers, added iptables rule in order to access the grafana web server in our own
     servers, with a url, without a port number.
+
+v3 19/09/2020
+    Added files:
+        public/img/grafana_typelogo.jpeg
+        public/img/grafana_enterprise_typelogo.png
+        public/img/grafana_com_auth_icon.png.png
+        public/img/finvezt_mask_icon.png
+
+    Path changes in: 
+        public\sass\components\_buttons.css
+        public\views\error-template.html
+        public\views\index-template.html
