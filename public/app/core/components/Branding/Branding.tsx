@@ -8,16 +8,17 @@ export interface BrandComponentProps {
 }
 
 // No need for LoginLogo
-// const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
-//   return <img className={className} src="public/img/finvezt_icon.png" alt="Grafana" />;
-// };
+const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
+  // return <img className={className} src="public/img/finvezt-logo.png" alt="Grafana" />;
+  return <img src="public/img/finvezt-logo-300.png" alt="Finvezt" />;
+};
 
 const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
   // we have only one theme
   // const theme = useTheme();
   // background: url(public/img/login_background_${theme.isDark ? 'dark' : 'light'}.svg);
   const background = css`
-    background: url(public/img/finvezt.png);
+    background: url(public/img/black_background.jpg);
     background-size: cover;
   `;
 
@@ -38,10 +39,10 @@ const LoginBoxBackground = () => {
 
 export class Branding {
   // Remove LoginLogo
-  // static LoginLogo = LoginLogo;
+  static LoginLogo = LoginLogo;
   static LoginBackground = LoginBackground;
   static MenuLogo = MenuLogo;
   static LoginBoxBackground = LoginBoxBackground;
   static AppTitle = 'Finvezt';
-  static LoginTitle = 'Welcome to Finvezt';
+  // static LoginTitle = 'Welcome to Finvezt';
 }

@@ -19,9 +19,9 @@ export const LoginLayout: FC = ({ children }) => {
     <Branding.LoginBackground className={loginStyles.container}>
       <div className={cx(loginStyles.loginContent, Branding.LoginBoxBackground())}>
         <div className={loginStyles.loginLogoWrapper}>
-          {/*We don't use it <Branding.LoginLogo className={loginStyles.loginLogo} /> */}
+          <Branding.LoginLogo className={loginStyles.loginLogo} />
           <div className={loginStyles.titleWrapper}>
-            <h1 className={loginStyles.mainTitle}>{Branding.LoginTitle}</h1>
+            {/* <h1 className={loginStyles.mainTitle}>{Branding.LoginTitle}</h1> */}
             {/* Removed the slogans <h3 className={loginStyles.subTitle}>{Branding.GetLoginSubTitle()}</h3> */}
           </div>
         </div>
