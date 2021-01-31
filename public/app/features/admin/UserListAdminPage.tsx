@@ -29,7 +29,7 @@ interface DispatchProps {
 
 type Props = OwnProps & ConnectedProps & DispatchProps;
 
-const UserListAdminPageUnConnected: React.FC<Props> = (props) => {
+const UserListAdminPageUnConnected: React.FC<Props> = props => {
   const styles = getStyles();
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const UserListAdminPageUnConnected: React.FC<Props> = (props) => {
                 autoFocus={true}
                 value={props.query}
                 spellCheck={false}
-                onChange={(event) => props.changeQuery(event.currentTarget.value)}
+                onChange={event => props.changeQuery(event.currentTarget.value)}
                 prefix={<Icon name="search" />}
               />
               <LinkButton href="admin/users/create" variant="primary">
@@ -69,7 +69,7 @@ const UserListAdminPageUnConnected: React.FC<Props> = (props) => {
                   <th>Name</th>
                   <th>
                     Seen&nbsp;
-                    <Tooltip placement="top" content="Time since user was seen using Grafana">
+                    <Tooltip placement="top" content="Time since user was seen using Finvezt">
                       <Icon name="question-circle" />
                     </Tooltip>
                   </th>
@@ -150,7 +150,7 @@ const mapDispatchToProps: MapDispatchToProps<DispatchProps, OwnProps> = {
   changePage,
 };
 
-const mapStateToProps: MapStateToProps<ConnectedProps, OwnProps, StoreState> = (state) => ({
+const mapStateToProps: MapStateToProps<ConnectedProps, OwnProps, StoreState> = state => ({
   navModel: getNavModel(state.navIndex, 'global-users'),
   users: state.userListAdmin.users,
   query: state.userListAdmin.query,

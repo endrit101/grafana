@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { renderMarkdown, LinkModelSupplier, ScopedVars } from '@grafana/data';
+import { LinkModelSupplier, ScopedVars } from '@grafana/data';
 import { Tooltip, PopoverContent } from '@grafana/ui';
 // Removing Inspect tab (And with other commented code)
 // import { getLocationSrv } from '@grafana/runtime';
@@ -8,11 +8,7 @@ import { Tooltip, PopoverContent } from '@grafana/ui';
 import { PanelModel } from 'app/features/dashboard/state/PanelModel';
 import { getTimeSrv, TimeSrv } from 'app/features/dashboard/services/TimeSrv';
 // import { InspectTab } from '../../components/Inspector/types';
-<<<<<<< HEAD
-=======
-// import { InspectTab } from '../../components/Inspector/types';
-import { selectors } from '@grafana/e2e-selectors';
->>>>>>> af6d43840d... fixed merge conflicts
+// import { selectors } from '@grafana/e2e-selectors';
 
 enum InfoMode {
   Error = 'Error',
@@ -49,14 +45,14 @@ export class PanelHeaderCorner extends Component<Props> {
 
   getInfoContent = (): JSX.Element => {
     const { panel } = this.props;
-    const markdown = panel.description || '';
-    const interpolatedMarkdown = getTemplateSrv().replace(markdown, panel.scopedVars);
-    const markedInterpolatedMarkdown = renderMarkdown(interpolatedMarkdown);
+    // const markdown = panel.description || '';
+    // const interpolatedMarkdown = getTemplateSrv().replace(markdown, panel.scopedVars);
+    // const markedInterpolatedMarkdown = renderMarkdown(interpolatedMarkdown);
     const links = this.props.links && this.props.links.getLinks(panel.replaceVariables);
 
     return (
       <div className="panel-info-content markdown-html">
-        <div dangerouslySetInnerHTML={{ __html: markedInterpolatedMarkdown }} />
+        {/* <div dangerouslySetInnerHTML={{ __html: markedInterpolatedMarkdown }} /> */}
 
         {links && links.length > 0 && (
           <ul className="panel-info-corner-links">
